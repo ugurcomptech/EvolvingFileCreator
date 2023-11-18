@@ -17,7 +17,7 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 3. **Projeyi Çalıştırın:** Aşağıdaki komutla projeyi başlatabilirsiniz:
 
     ```bash
-    python main.py
+    python app.py
     ```
 
 ## Klasör Yapısı
