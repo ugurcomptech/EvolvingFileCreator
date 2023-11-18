@@ -1,6 +1,15 @@
 # Evolving File Creator
 
-Bu proje, belirli klasörlerdeki dosyaların boyutunu artırarak ardışık olarak kopyalayan bir örnektir.
+Bu script, çalıştığı bilgisayar üzerinde, scriptin içinde belirtilen dosya yollarına `.txt` uzantılı dosyalar oluşturur. Dosyaların boyutu başlangıçta 0 KB olup saniyede 500 MB artmaktadır. Arttırılacak olan boyut ne kadar fazla olursa, işlem o kadar uzun sürebilir.
+
+
+## Bu Virüs Bulaştı: Dosyaları Nasıl Bulup Silebilirim?
+
+- Bilgisayarı kapatıp yeniden başlatarak virüsün dosya oluşturmasını engelleyebilirsiniz (Ben bu virüs de regedite kaydetme komutu eklemedim ama saldırganlar ekleyebilir).
+- Size saldıran kişi yüksek ihtimalle klasör isimlerini sistem dosyalarıyla benzer şekilde bir isim yapmıştır, onları kontrol edebilirsiniz.
+- Treesize gibi programlar indirip disklerinizi taratabilirsiniz ve bilmediğiniz büyük boyuttaki dosyaları silebilirsiniz.
+
+
 
 ## Kurulum
 
