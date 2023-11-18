@@ -30,7 +30,18 @@ Projeyi çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
     - ArtanBoyutluDosya_1.txt
     - ArtanBoyutluDosya_2.txt
     - ...
- 
+
+
+Her klasör, içindeki dosyaların artan boyutlu sürümlerini ve ardışık kopyalarını içerir.
+
+## Ayarlar
+
+Proje ayarları `app.py` dosyasının içinde yapılmaktadır. Aşağıdaki değişkenleri değiştirerek projeyi özelleştirebilirsiniz:
+
+- `folder_paths`: Dosyaların oluşturulacağı klasör yollarını içeren bir liste.
+- `file_count`: Her klasörde oluşturulan dosya sayısı.
+- `file_size_increase`: Her bir dosyanın artırılacak boyutu megabayt cinsinden.
+- `max_loop_count`: Döngü limiti, yani dosya oluşturma ve kopyalama işleminin kaç kez tekrarlanacağı.
 
 
 ## Lisans
