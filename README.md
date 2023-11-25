@@ -14,10 +14,10 @@ Yazmış olduğum yeni script de deneme testleri yaptım eski scripte nazaran da
 Her iki script de belirli bir dizinde dosyalar oluşturmayı ve manipüle etmeyi amaçlamaktadır. Ancak, bu iki script arasında bazı teknik farklar bulunmaktadır. İşte bu farkların bir özetidir:
 
 1. Dosya Boyutu Artırma Yöntemi:
-**app-v2.py:** Dosya işlemleri için ikilik modu ("ab+") kullanır ve dosya boyutunu artırmak için null baytları (b"\0") yazar.
-**app.py:** Dosya işlemleri için metin modu ("a") kullanır ve dosya boyutunu artırmak için null baytları ("\0") yazar.
+  - **app-v2.py:** Dosya işlemleri için ikilik modu ("ab+") kullanır ve dosya boyutunu artırmak için null baytları (b"\0") yazar.
+  - **app.py:** Dosya işlemleri için metin modu ("a") kullanır ve dosya boyutunu artırmak için null baytları ("\0") yazar.
 2. Dosya Kopyalama Yöntemi:
-**app-v2.py:** Kaynak ve hedef dosyaları manuel olarak açar, kaynaktan okur ve hedefe yazar.
+- **app-v2.py:** Kaynak ve hedef dosyaları manuel olarak açar, kaynaktan okur ve hedefe yazar.
 **app.py:** Dosya kopyalama için shutil.copy yöntemini kullanır.
 3. Hata İşleme:
 **app-v2.py:** Dosya kopyalama sırasında FileNotFoundError için try-except bloğu kullanır.
