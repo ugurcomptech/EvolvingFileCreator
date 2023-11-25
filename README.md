@@ -2,6 +2,45 @@
 
 Bu script, çalıştığı bilgisayar üzerinde, scriptin içinde belirtilen dosya yollarına `.txt` uzantılı dosyalar oluşturur. Dosyaların boyutu başlangıçta 0 KB olup saniyede 500 MB artmaktadır. Arttırılacak olan boyut ne kadar fazla olursa, işlem o kadar uzun sürebilir.
 
+## Güncelleme : 25.11.2023
+
+Yazmış olduğum yeni script de deneme testleri yaptım eski scripte nazaran daha hızlı dosya boyutunu arttırdı. 2 Dakikalık testlere tabi tuttuğumda ``app.py`` scripti 1 dosya üzerinden yaklaşık 5 GB'lık bir dosya oluşturabildi. Yazmış olduğum bir diğer script  ``app-v2.py`` olan ise 2 daikalık süre içerisinde 1 dosya üzerinden yaklaşık 9 GB'lık bir dosya alanı kaplamıştır. Teknik detaylarına gelmeden önce şunu söylemeliyim ki neredeyse 2 katı bir hız sağlayarak bunu yapıyor. Ne kadar tehlikeli olsa da yasal sınırlar içinde kullanmayı unutmayınız.
+
+### Teknik farklılıklar : 25.11.2023
+
+
+**app-v2.py:** ile **app.py:**Arasındaki Teknik Farklar
+
+Her iki script de belirli bir dizinde dosyalar oluşturmayı ve manipüle etmeyi amaçlamaktadır. Ancak, bu iki script arasında bazı teknik farklar bulunmaktadır. İşte bu farkların bir özetidir:
+
+1. Dosya Boyutu Artırma Yöntemi:
+**app-v2.py:** Dosya işlemleri için ikilik modu ("ab+") kullanır ve dosya boyutunu artırmak için null baytları (b"\0") yazar.
+**app.py:** Dosya işlemleri için metin modu ("a") kullanır ve dosya boyutunu artırmak için null baytları ("\0") yazar.
+2. Dosya Kopyalama Yöntemi:
+**app-v2.py:** Kaynak ve hedef dosyaları manuel olarak açar, kaynaktan okur ve hedefe yazar.
+**app.py:** Dosya kopyalama için shutil.copy yöntemini kullanır.
+3. Hata İşleme:
+**app-v2.py:** Dosya kopyalama sırasında FileNotFoundError için try-except bloğu kullanır.
+**app.py:** Aynı şekilde try-except bloğu kullanır ancak doğrudan shutil.copy kullanarak dosya bulunamama hatalarını işler.
+4. Kütüphane Kullanımı:
+**app-v2.py:** Dosya işlemleri için standart open fonksiyonunu kullanır.
+**app.py:** Dosya kopyalama gibi işlemler için shutil kütüphanesini kullanır, bu da dosya ile ilgili işlemleri basitleştirebilir ve geliştirebilir.
+5. Dosya Açma Modu:
+**app-v2.py:** Manuel olarak dosya kopyalarken "rb" (ikilik okuma) ve "wb" (ikilik yazma) modlarını kullanır.
+**app.py:** Dosya içeriğini metin olarak ele alarak yazma işlemi için metin modunu ("a") kullanır.
+6. Dosya Oluşturma:
+**app-v2.py:** Dosyaları "x" moduyla (özel oluşturma) oluşturur, potansiyel olarak bir FileExistsError hatası alabilir.
+**app.py:** Aynı şekilde dosya oluşturmak için "x" modunu kullanır, FileExistsError'ı benzer bir şekilde ele alır.
+7. Dosya Yolu Oluşturma:
+Her iki script de dosya yollarını daha iyi çapraz platform uyumluluğu için os.path.join kullanarak oluşturur.
+8. Günlükleme:
+Her iki script de işleme döngüleri hakkında bilgi çıktısı vermek için logging modülünü kullanır.
+9. Bekleme Süresi:
+Her iki script de işleme döngüleri arasında 1 saniyelik bir bekleme süresi ekler.
+10. Dosya Boyutu Artırma Yöntemi (Script 1):
+**app-v2.py:**"ab+" modunu kullanır ve null baytlarını dosya boyutunu artırmak için yazmadan önce sona konumlandırır.
+11. Dosya Boyutu Artırma Yöntemi (Script 2):
+**app.py:** "a" modunu kullanır ve dosyaya boyut eklemek için null baytlarını ekler.
 
 ## Bu Virüs Bulaştı: Dosyaları Nasıl Bulup Silebilirim?
 
