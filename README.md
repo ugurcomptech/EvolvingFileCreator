@@ -18,29 +18,29 @@ Her iki script de belirli bir dizinde dosyalar oluşturmayı ve manipüle etmeyi
   - **app.py:** Dosya işlemleri için metin modu ("a") kullanır ve dosya boyutunu artırmak için null baytları ("\0") yazar.
 2. Dosya Kopyalama Yöntemi:
 - **app-v2.py:** Kaynak ve hedef dosyaları manuel olarak açar, kaynaktan okur ve hedefe yazar.
-**app.py:** Dosya kopyalama için shutil.copy yöntemini kullanır.
+- **app.py:** Dosya kopyalama için shutil.copy yöntemini kullanır.
 3. Hata İşleme:
-**app-v2.py:** Dosya kopyalama sırasında FileNotFoundError için try-except bloğu kullanır.
-**app.py:** Aynı şekilde try-except bloğu kullanır ancak doğrudan shutil.copy kullanarak dosya bulunamama hatalarını işler.
+- **app-v2.py:** Dosya kopyalama sırasında FileNotFoundError için try-except bloğu kullanır.
+- **app.py:** Aynı şekilde try-except bloğu kullanır ancak doğrudan shutil.copy kullanarak dosya bulunamama hatalarını işler.
 4. Kütüphane Kullanımı:
-**app-v2.py:** Dosya işlemleri için standart open fonksiyonunu kullanır.
-**app.py:** Dosya kopyalama gibi işlemler için shutil kütüphanesini kullanır, bu da dosya ile ilgili işlemleri basitleştirebilir ve geliştirebilir.
+- **app-v2.py:** Dosya işlemleri için standart open fonksiyonunu kullanır.
+- **app.py:** Dosya kopyalama gibi işlemler için shutil kütüphanesini kullanır, bu da dosya ile ilgili işlemleri basitleştirebilir ve geliştirebilir.
 5. Dosya Açma Modu:
-**app-v2.py:** Manuel olarak dosya kopyalarken "rb" (ikilik okuma) ve "wb" (ikilik yazma) modlarını kullanır.
-**app.py:** Dosya içeriğini metin olarak ele alarak yazma işlemi için metin modunu ("a") kullanır.
+- **app-v2.py:** Manuel olarak dosya kopyalarken "rb" (ikilik okuma) ve "wb" (ikilik yazma) modlarını kullanır.
+- **app.py:** Dosya içeriğini metin olarak ele alarak yazma işlemi için metin modunu ("a") kullanır.
 6. Dosya Oluşturma:
-**app-v2.py:** Dosyaları "x" moduyla (özel oluşturma) oluşturur, potansiyel olarak bir FileExistsError hatası alabilir.
-**app.py:** Aynı şekilde dosya oluşturmak için "x" modunu kullanır, FileExistsError'ı benzer bir şekilde ele alır.
+- **app-v2.py:** Dosyaları "x" moduyla (özel oluşturma) oluşturur, potansiyel olarak bir FileExistsError hatası alabilir.
+- **app.py:** Aynı şekilde dosya oluşturmak için "x" modunu kullanır, FileExistsError'ı benzer bir şekilde ele alır.
 7. Dosya Yolu Oluşturma:
-Her iki script de dosya yollarını daha iyi çapraz platform uyumluluğu için os.path.join kullanarak oluşturur.
+- Her iki script de dosya yollarını daha iyi çapraz platform uyumluluğu için os.path.join kullanarak oluşturur.
 8. Günlükleme:
-Her iki script de işleme döngüleri hakkında bilgi çıktısı vermek için logging modülünü kullanır.
+- Her iki script de işleme döngüleri hakkında bilgi çıktısı vermek için logging modülünü kullanır.
 9. Bekleme Süresi:
-Her iki script de işleme döngüleri arasında 1 saniyelik bir bekleme süresi ekler.
+- Her iki script de işleme döngüleri arasında 1 saniyelik bir bekleme süresi ekler.
 10. Dosya Boyutu Artırma Yöntemi (Script 1):
-**app-v2.py:**"ab+" modunu kullanır ve null baytlarını dosya boyutunu artırmak için yazmadan önce sona konumlandırır.
+- **app-v2.py:**"ab+" modunu kullanır ve null baytlarını dosya boyutunu artırmak için yazmadan önce sona konumlandırır.
 11. Dosya Boyutu Artırma Yöntemi (Script 2):
-**app.py:** "a" modunu kullanır ve dosyaya boyut eklemek için null baytlarını ekler.
+- **app.py:** "a" modunu kullanır ve dosyaya boyut eklemek için null baytlarını ekler.
 
 ## Bu Virüs Bulaştı: Dosyaları Nasıl Bulup Silebilirim?
 
