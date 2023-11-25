@@ -6,10 +6,10 @@ Bu script, çalıştığı bilgisayar üzerinde, scriptin içinde belirtilen dos
 
 Yazmış olduğum yeni script de deneme testleri yaptım eski scripte nazaran daha hızlı dosya boyutunu arttırdı. 2 Dakikalık testlere tabi tuttuğumda ``app.py`` scripti 1 dosya üzerinden yaklaşık 5 GB'lık bir dosya oluşturabildi. Yazmış olduğum bir diğer script  ``app-v2.py`` olan ise 2 daikalık süre içerisinde 1 dosya üzerinden yaklaşık 9 GB'lık bir dosya alanı kaplamıştır. Teknik detaylarına gelmeden önce şunu söylemeliyim ki neredeyse 2 katı bir hız sağlayarak bunu yapıyor. Ne kadar tehlikeli olsa da yasal sınırlar içinde kullanmayı unutmayınız.
 
-### Teknik farklılıklar : 25.11.2023
+## Teknik farklılıklar : 25.11.2023
 
 
-**app-v2.py:** ile **app.py:**Arasındaki Teknik Farklar
+### **app-v2.py:** ile **app.py:** Arasındaki Teknik Farklar
 
 Her iki script de belirli bir dizinde dosyalar oluşturmayı ve manipüle etmeyi amaçlamaktadır. Ancak, bu iki script arasında bazı teknik farklar bulunmaktadır. İşte bu farkların bir özetidir:
 
