@@ -37,9 +37,9 @@ Her iki script de belirli bir dizinde dosyalar oluşturmayı ve manipüle etmeyi
 - Her iki script de işleme döngüleri hakkında bilgi çıktısı vermek için logging modülünü kullanır.
 9. Bekleme Süresi:
 - Her iki script de işleme döngüleri arasında 1 saniyelik bir bekleme süresi ekler.
-10. Dosya Boyutu Artırma Yöntemi (Script 1):
+10. Dosya Boyutu Artırma Yöntemi (app-v2.py):
 - **app-v2.py:**"ab+" modunu kullanır ve null baytlarını dosya boyutunu artırmak için yazmadan önce sona konumlandırır.
-11. Dosya Boyutu Artırma Yöntemi (Script 2):
+11. Dosya Boyutu Artırma Yöntemi (app.py):
 - **app.py:** "a" modunu kullanır ve dosyaya boyut eklemek için null baytlarını ekler.
 
 ## Bu Virüs Bulaştı: Dosyaları Nasıl Bulup Silebilirim?
