@@ -10,7 +10,6 @@ def create_file(file_path):
     try:
         with open(file_path, "x"):
             pass
-        # Dosyayı gizle
         win32api.SetFileAttributes(file_path, win32con.FILE_ATTRIBUTE_HIDDEN)
     except FileExistsError:
         pass
